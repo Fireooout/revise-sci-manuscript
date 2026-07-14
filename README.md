@@ -1,3 +1,5 @@
+﻿[English](README.md) | [简体中文](README.zh-CN.md)
+
 # revise-sci-manuscript
 
 A Codex skill for staged, review-gated, and versioned revision of SCI manuscripts and submission materials.
@@ -43,3 +45,7 @@ Start a new Codex task after installation.
 The initializer creates source_materials, project-state.json, and version folders such as v001 and v002. It refuses to overwrite a non-empty version directory.
 
     python skills/revise-sci-manuscript/scripts/initialize_revision_workspace.py <project-root> --project-name "My Manuscript" --version v001
+
+## License
+
+Released under the MIT License. See LICENSE.
