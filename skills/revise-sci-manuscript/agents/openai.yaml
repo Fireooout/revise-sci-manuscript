@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCI Manuscript Revision"
+  short_description: "标准化推进 SCI 手稿润色、配图优化与版本化交付"
+  default_prompt: "Use $revise-sci-manuscript to initialize and manage a staged SCI manuscript revision workflow."
