@@ -8,6 +8,26 @@ Record project name, article type, target journal, deadline, English variety, su
 
 Do not block on optional information. Block only when proceeding could corrupt data, alter scientific meaning, violate confidentiality, or produce the wrong submission format.
 
+## Project brief
+
+Record mode, version and parent, objective, success criteria, supplied evidence, scope, exclusions, target journal and article type, scientific invariants, terminology rules, author judgments, AI recommendations, assumptions, risks, hard blockers, deliverables, and confirmation state.
+
+In command mode, distinguish clearly among facts extracted from source files, user-provided decisions, and AI recommendations. Ask the user to confirm this brief before creating the full execution plan. In unbounded mode, mark the brief as AI-synthesized and place user-editable assumptions directly in the plan.
+
+## Full execution plan
+
+Cover the whole requested iteration, not only the next stage. For every task record ID, stage, dependency, difficulty, scientific risk, exact model or runtime, reasoning level, specialist skill or tool, fallback, inputs, outputs, validation, pause condition, and status.
+
+Verify that:
+
+- every requested deliverable maps to one or more tasks;
+- high-risk scientific judgments use the strongest suitable available reasoning path;
+- repetitive low-risk checks use lightweight models or deterministic scripts;
+- figure and document tasks include visual validation;
+- model fallbacks are explicit, especially in unbounded mode;
+- version creation, context compression, sealing, and final delivery are scheduled;
+- the user can edit model allocation before approval.
+
 ## Text extraction quality control
 
 - Preserve title hierarchy, paragraph order, captions, table text, equations, symbols, superscripts, subscripts, units, and citation markers.
@@ -61,8 +81,10 @@ Check:
 
 Render DOCX and PDF outputs for visual inspection when tools permit. Do not rely only on text extraction.
 
-## Review-gate response
+## Mode-aware gate response
 
-At every gate, present files created or updated, top findings or changes, decisions required from the user, unresolved risks, and the exact next action after approval.
+At each gate required by the selected mode, present files created or updated, top findings or changes, decisions required from the user, unresolved risks, and the exact next action after approval.
+
+In command or unbounded execution, provide progress updates without converting them into approval requests. Pause only under the hard-stop rules in `modes-and-orchestration.md` or when the approved plan requires it.
 
 Accept user edits as authoritative unless they conflict with data integrity, scientific consistency, journal policy, or another explicit instruction. Explain any conflict before proceeding.
